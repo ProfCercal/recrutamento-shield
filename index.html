@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central de recrutamento de heróis da S.H.I.E.L.D., projeto didático de JavaScript.">
+  <title>Central de Recrutamento — S.H.I.E.L.D.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container">
+      <p class="sigla">S.H.I.E.L.D.</p>
+      <h1>Central de Recrutamento</h1>
+      <p>Cadastre os heróis da nova equipe e acompanhe a força do grupo.</p>
+    </div>
+  </header>
+
+  <main class="container grade">
+    <section class="painel" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Novo recruta</h2>
+      <form id="formulario" novalidate>
+        <label for="codinome">Codinome</label>
+        <input type="text" id="codinome" name="codinome" autocomplete="off">
+
+        <label for="nome">Nome real</label>
+        <input type="text" id="nome" name="nome" autocomplete="off">
+
+        <div class="linha">
+          <div>
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade">
+          </div>
+          <div>
+            <label for="poder">Nível de poder (0 a 100)</label>
+            <input type="number" id="poder" name="poder">
+          </div>
+        </div>
+
+        <label for="ingresso">Data de ingresso</label>
+        <input type="date" id="ingresso" name="ingresso">
+
+        <label for="email">E-mail de contato</label>
+        <input type="email" id="email" name="email" autocomplete="off">
+
+        <button type="submit">Recrutar</button>
+        <p id="mensagem" class="mensagem" role="status"></p>
+      </form>
+    </section>
+
+    <section class="painel" aria-labelledby="titulo-resumo">
+      <h2 id="titulo-resumo">Resumo da equipe</h2>
+      <dl class="resumo">
+        <dt>Recrutas</dt>
+        <dd id="total">0</dd>
+        <dt>Média de poder</dt>
+        <dd id="media">—</dd>
+        <dt>Mais poderoso</dt>
+        <dd id="maior">—</dd>
+      </dl>
+    </section>
+
+    <section class="painel largo" aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">Recrutas</h2>
+      <p id="vazio">Nenhum recruta ainda.</p>
+      <ul id="lista" class="lista"></ul>
+    </section>
+
+    <section class="painel largo" aria-labelledby="titulo-registro">
+      <h2 id="titulo-registro">Registro de atividades</h2>
+      <ul id="registro" class="registro"></ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto didático, sem fins comerciais. S.H.I.E.L.D. e os heróis citados pertencem à Marvel.</p>
+  </footer>
+</body>
+
+</html>
